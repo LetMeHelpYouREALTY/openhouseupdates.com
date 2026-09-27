@@ -1,4 +1,5 @@
-import { agentInfo, officeInfo, siteConfig, SITE_PHONE } from "./site-config";
+import { agentInfo, officeInfo, siteConfig } from "./site-config";
+import { getPhoneDisplay } from "./contact";
 import { getCanonicalUrl, getSiteUrl } from "./site-url";
 
 export function realEstateAgentJsonLd() {
@@ -21,8 +22,9 @@ export function realEstateAgentJsonLd() {
       containedInPlace: { "@type": "State", name: "Nevada" },
     },
   };
-  if (SITE_PHONE) {
-    base.telephone = SITE_PHONE.replace(/\D/g, "").replace(/^1/, "+1-");
+  const phone = getPhoneDisplay();
+  if (phone) {
+    base.telephone = phone.replace(/\D/g, "").replace(/^1/, "+1-");
   }
   return base;
 }
@@ -50,8 +52,9 @@ export function localBusinessJsonLd() {
       longitude: officeInfo.coordinates.lng,
     },
   };
-  if (SITE_PHONE) {
-    base.telephone = SITE_PHONE;
+  const phone = getPhoneDisplay();
+  if (phone) {
+    base.telephone = phone;
   }
   return base;
 }

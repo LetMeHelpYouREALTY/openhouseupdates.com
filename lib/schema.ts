@@ -6,7 +6,8 @@
  * @see https://developers.google.com/search/docs/appearance/structured-data
  */
 
-import { siteConfig, agentInfo, officeInfo, SITE_PHONE } from "./site-config";
+import { siteConfig, agentInfo, officeInfo } from "./site-config";
+import { getPhoneDisplay } from "./contact";
 import { getSiteUrl } from "./site-url";
 
 // ============================================================================
@@ -185,7 +186,10 @@ export function generateRealEstateAgentSchema() {
       "First-time homebuyers",
     ],
     slogan: "Henderson open houses this weekend",
-    ...(SITE_PHONE ? { telephone: SITE_PHONE } : {}),
+    ...((): Record<string, string> => {
+      const phone = getPhoneDisplay();
+      return phone ? { telephone: phone } : {};
+    })(),
   };
 }
 

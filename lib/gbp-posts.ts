@@ -30,10 +30,10 @@ export const gbpPostTemplates: GBPPost[] = [
 
 Whether you're buying your first home in Henderson, selling in Summerlin, or looking at 55+ communities like Sun City, now is a great time to make your move.
 
-Call Dr. Jan Duffy at (702) 500-1942 for a free market analysis of your home or neighborhood.`,
+Request a market consult at https://www.openhouseupdates.com/contact.`,
     cta: {
       text: "Get Free Market Analysis",
-      url: "https://heyberkshire.com/home-valuation",
+      url: "https://www.openhouseupdates.com/home-valuation",
     },
     publishDate: "2026-01-20",
     keywords: ["Las Vegas real estate", "Henderson homes", "Summerlin", "55+ communities", "market update"],
@@ -51,10 +51,10 @@ Call Dr. Jan Duffy at (702) 500-1942 for a free market analysis of your home or 
 
 A $1.2M California home could buy you a luxury property in Summerlin or The Ridges. Dr. Jan Duffy specializes in California-to-Nevada relocations and can help you maximize your equity.
 
-Call (702) 500-1942 for a free California equity comparison.`,
+Request a relocation consult at https://www.openhouseupdates.com/contact.`,
     cta: {
       text: "California Relocation Guide",
-      url: "https://heyberkshire.com/buyers/california-relocator",
+      url: "https://www.openhouseupdates.com/buyers",
     },
     publishDate: "2026-01-13",
     keywords: ["California relocation", "Las Vegas", "no state income tax", "Summerlin", "The Ridges"],
@@ -72,10 +72,10 @@ Call (702) 500-1942 for a free California equity comparison.`,
 
 Each offers different amenities, price points, and lifestyles. Dr. Jan Duffy specializes in 55+ communities and can help you find the perfect fit.
 
-Schedule a community tour: (702) 500-1942`,
+Schedule a tour via https://www.openhouseupdates.com/contact.`,
     cta: {
       text: "Explore 55+ Communities",
-      url: "https://heyberkshire.com/55-plus-communities",
+      url: "https://www.openhouseupdates.com/contact",
     },
     publishDate: "2026-01-06",
     keywords: ["55+ communities", "Sun City Summerlin", "Sun City Anthem", "Del Webb", "active adult"],
@@ -98,10 +98,10 @@ Popular first-time buyer neighborhoods:
 - Mountains Edge (median $475K)
 - Centennial Hills (median $495K)
 
-Call (702) 500-1942 to start your homeownership journey.`,
+Start at https://www.openhouseupdates.com/buyers.`,
     cta: {
       text: "First-Time Buyer Guide",
-      url: "https://heyberkshire.com/buyers/first-time-buyers",
+      url: "https://www.openhouseupdates.com/buyers",
     },
     publishDate: "2025-12-30",
     keywords: ["first-time buyer", "down payment assistance", "FHA", "VA loan", "Las Vegas"],
@@ -123,10 +123,10 @@ Current seller stats:
 ⏱️ 28 days average time to sell
 💰 98.5% list-to-sale ratio
 
-Get a free home valuation from Dr. Jan Duffy: (702) 500-1942`,
+Request a home value review at https://www.openhouseupdates.com/home-valuation.`,
     cta: {
       text: "Get Free Home Valuation",
-      url: "https://heyberkshire.com/home-valuation",
+      url: "https://www.openhouseupdates.com/home-valuation",
     },
     publishDate: "2025-12-23",
     keywords: ["sell home Las Vegas", "home valuation", "listing agent", "Summerlin", "Henderson"],
@@ -148,10 +148,10 @@ Why luxury buyers choose Las Vegas:
 ✅ World-class dining, entertainment, golf
 ✅ 40-60% lower than comparable CA/NY properties
 
-Confidential luxury home search: (702) 500-1942`,
+Request a private showing at https://www.openhouseupdates.com/contact.`,
     cta: {
       text: "Luxury Home Search",
-      url: "https://heyberkshire.com/buyers/luxury-homes-las-vegas",
+      url: "https://www.openhouseupdates.com/listings",
     },
     publishDate: "2025-12-16",
     keywords: ["luxury homes Las Vegas", "The Ridges", "MacDonald Highlands", "high-rise condos"],
@@ -192,7 +192,7 @@ ${clientName}, thank you for sharing your experience. I take all feedback seriou
 
 ${resolution}
 
-Real estate transactions can be complex, and I'm committed to learning from every experience. If you'd like to discuss this further, please call me directly at (702) 500-1942.
+Real estate transactions can be complex, and I'm committed to learning from every experience. If you'd like to discuss this further, please reach out via openhouseupdates.com/contact.
 
 - Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties
 `,

@@ -1,8 +1,5 @@
 import { getSiteUrl } from "./site-url";
 
-/** No assigned tracking number yet — do not render phone CTAs until set. */
-export const SITE_PHONE: string | null = null;
-
 export const REALSCOUT_AGENT_ID = "QWdlbnQtMjI1MDUw";
 
 export const siteConfig = {

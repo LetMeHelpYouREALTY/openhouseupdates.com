@@ -1,4 +1,4 @@
-import { SITE_PHONE } from "@/lib/site-config";
+import { getPhoneDisplay, getPhoneTelHref } from "@/lib/contact";
 
 type PhoneLinkProps = {
   className?: string;
@@ -6,11 +6,12 @@ type PhoneLinkProps = {
 };
 
 export function PhoneLink({ className, children }: PhoneLinkProps) {
-  if (!SITE_PHONE) return null;
-  const tel = SITE_PHONE.replace(/\D/g, "");
+  const href = getPhoneTelHref();
+  const display = getPhoneDisplay();
+  if (!href || !display) return null;
   return (
-    <a href={`tel:+1${tel}`} className={className}>
-      {children ?? SITE_PHONE}
+    <a href={href} className={className}>
+      {children ?? display}
     </a>
   );
 }

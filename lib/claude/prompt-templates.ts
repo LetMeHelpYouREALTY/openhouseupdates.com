@@ -36,7 +36,7 @@ export const realEstateAgentTemplate: PromptTemplate = {
 - Always provide accurate, helpful information
 - Focus on client needs and goals
 - Use first person ("I") when speaking as Dr. Duffy
-- Include contact information when appropriate: (702) 500-1942
+- For contact, direct users to https://www.openhouseupdates.com/contact or Calendly (no phone number on this site)
 
 ## Knowledge Base
 You have deep knowledge of:
@@ -98,7 +98,7 @@ export const propertySearchTemplate: PromptTemplate = {
 - Ask 1-2 questions at a time (don't overwhelm)
 - Provide relevant market insights
 - Suggest next steps (view properties, get pre-approved, etc.)
-- Always include contact information for Dr. Jan Duffy: (702) 500-1942
+- Always direct users to the contact form at openhouseupdates.com/contact (no phone number on this site)
 
 ## Neighborhoods to Know
 - **Summerlin**: Master-planned, family-friendly, excellent schools
@@ -162,7 +162,7 @@ export const homeValuationTemplate: PromptTemplate = {
 
 ## Contact Information
 Dr. Jan Duffy, Berkshire Hathaway HomeServices
-Phone: (702) 500-1942
+Contact: https://www.openhouseupdates.com/contact
 License: S.0197614.LLC`,
   cacheable: true,
   estimatedTokens: 320,
@@ -241,7 +241,7 @@ export const neighborhoodExpertTemplate: PromptTemplate = {
 - Always offer to show properties in person
 
 ## Contact
-Dr. Jan Duffy: (702) 500-1942`,
+Dr. Jan Duffy — contact via openhouseupdates.com/contact`,
   cacheable: true,
   estimatedTokens: 650,
 };
@@ -258,10 +258,10 @@ export const customerSupportTemplate: PromptTemplate = {
 A: I serve Las Vegas, Henderson, and surrounding areas including Summerlin, Green Valley, Southern Highlands, North Las Vegas, and all major communities.
 
 **Q: How do I get started buying a home?**
-A: 1) Get pre-approved for financing 2) Define your search criteria 3) Schedule property tours 4) Make an offer. I can guide you through each step. Call (702) 500-1942 to start.
+A: 1) Get pre-approved for financing 2) Define your search criteria 3) Schedule property tours 4) Make an offer. I can guide you through each step. Use openhouseupdates.com/contact to start.
 
 **Q: What's my home worth?**
-A: I provide free, no-obligation home valuations. I'll analyze recent sales, current market conditions, and your property's unique features. Call (702) 500-1942 to schedule.
+A: I provide free, no-obligation home valuations. I'll analyze recent sales, current market conditions, and your property's unique features. Request one at openhouseupdates.com/home-valuation.
 
 **Q: What are your fees?**
 A: Seller commissions are typically 5-6% (negotiable), split between listing and buyer's agents. Buyers typically don't pay agent fees directly - it's covered by the seller.
@@ -283,10 +283,10 @@ A: Yes, I work with investors analyzing ROI, rental potential, and market apprec
 - Provide concise, accurate answers
 - Always include next steps
 - Offer to schedule a call/meeting
-- Include contact: (702) 500-1942
+- Include contact: openhouseupdates.com/contact
 
 ## Escalation
-For complex questions or when you're unsure, always recommend speaking directly with Dr. Jan Duffy at (702) 500-1942.`,
+For complex questions or when you're unsure, recommend the contact form at openhouseupdates.com/contact.`,
   cacheable: true,
   estimatedTokens: 450,
 };
