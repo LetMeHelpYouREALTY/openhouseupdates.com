@@ -77,7 +77,19 @@ async function verifyTurnstileToken(token: string): Promise<boolean> {
 
 export async function POST(request: NextRequest) {
   try {
-    const data: LeadCaptureRequest = await request.json();
+    const raw = await request.text();
+    if (!raw.trim()) {
+      return NextResponse.json({ error: 'Request body required' }, { status: 400 });
+    }
+    let data: LeadCaptureRequest;
+    try {
+      data = JSON.parse(raw) as LeadCaptureRequest;
+    } catch {
+      return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
+    }
+    if (Object.keys(data).length === 0) {
+      return NextResponse.json({ error: 'Request body required' }, { status: 400 });
+    }
 
     // Check rate limit (5 submissions per hour per IP)
     const clientId = getClientId(request);
@@ -133,8 +145,17 @@ export async function POST(request: NextRequest) {
     }
 
     // Initialize FUB client
+    const apiKey =
+      process.env.FOLLOW_UP_BOSS_API_KEY || process.env.FUB_API_KEY || '';
+    if (!apiKey) {
+      return NextResponse.json(
+        { error: 'Lead capture is not configured' },
+        { status: 503 }
+      );
+    }
+
     const fub = new FollowUpBossClient({
-      apiKey: process.env.FUB_API_KEY || '',
+      apiKey,
       systemKey: process.env.FUB_SYSTEM_KEY,
     });
 
@@ -151,7 +172,7 @@ export async function POST(request: NextRequest) {
       name: data.name || `${data.firstName || ''} ${data.lastName || ''}`.trim(),
       emails: data.email ? [{ value: data.email }] : undefined,
       phones: data.phone ? [{ value: data.phone }] : undefined,
-      source: enrichSource(data.source, request),
+      source: enrichSource(data.source ?? 'openhouseupdates.com', request),
       stage: data.stage || 'New Lead',
       customFields: {
         ...data.customFields,
@@ -267,7 +288,7 @@ function enrichSource(source: string | undefined, request: NextRequest): string 
   if (referrer) {
     try {
       const refUrl = new URL(referrer);
-      if (!refUrl.hostname.includes('heyberkshire.com')) {
+      if (!refUrl.hostname.includes('openhouseupdates.com')) {
         return `referral/${refUrl.hostname}`;
       }
     } catch (e) {
@@ -275,7 +296,7 @@ function enrichSource(source: string | undefined, request: NextRequest): string 
     }
   }
 
-  return source || 'website/direct';
+  return source || 'openhouseupdates.com';
 }
 
 /**

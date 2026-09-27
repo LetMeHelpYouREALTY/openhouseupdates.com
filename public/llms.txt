@@ -1,0 +1,25 @@
+# openhouseupdates.com
+
+> Henderson-only open house resource for buyers touring Green Valley, Anthem, Inspirada, Cadence, and MacDonald Ranch.
+
+- Site: https://www.openhouseupdates.com
+- Agent: Dr. Jan Duffy, REALTOR®, Nevada license S.0197614.LLC
+- Brokerage: Berkshire Hathaway HomeServices Nevada Properties
+- Office: 9406 W Lake Mead Blvd, Las Vegas, NV 89134
+- Primary topic: Henderson open houses this weekend
+- Sister site (Las Vegas valley): https://www.openhouseupdate.com/
+- Contact: https://www.openhouseupdates.com/contact (form + Calendly; no public phone on site)
+- Key pages:
+  - /henderson-open-houses-this-weekend
+  - /listings
+  - /neighborhoods/green-valley
+  - /neighborhoods/anthem
+  - /neighborhoods/inspirada
+  - /neighborhoods/cadence
+  - /neighborhoods/macdonald-ranch
+  - /open-house-tour-tips
+  - /new-construction
+  - /buyers
+  - /home-valuation
+  - /faq
+  - /about

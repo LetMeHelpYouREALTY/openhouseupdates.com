@@ -28,10 +28,10 @@ const nextConfig = {
         has: [
           {
             type: 'host',
-            value: 'heyberkshire.com',
+            value: 'openhouseupdates.com',
           },
         ],
-        destination: 'https://www.heyberkshire.com/:path*',
+        destination: 'https://www.openhouseupdates.com/:path*',
         permanent: true,
       },
     ]
