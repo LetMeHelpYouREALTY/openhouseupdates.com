@@ -1,10 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 
-const openrouter = new OpenAI({
-  apiKey: process.env.OPENROUTER_API_KEY,
-  baseURL: "https://openrouter.ai/api/v1",
-});
+// Created per request so the build doesn't need OPENROUTER_API_KEY at import time.
+function getOpenRouter() {
+  return new OpenAI({
+    apiKey: process.env.OPENROUTER_API_KEY,
+    baseURL: "https://getOpenRouter().ai/api/v1",
+  });
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -35,7 +38,7 @@ export async function POST(request: NextRequest) {
       },
     ];
 
-    const response = await openrouter.chat.completions.create({
+    const response = await getOpenRouter().chat.completions.create({
       model: "anthropic/claude-3.5-haiku",
       messages,
       temperature: 0.7,
