@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import { pageMetadata } from "@/lib/page-metadata";
 import { siteConfig } from "@/lib/site-config";
+import WidgetTracker from './widget-tracker'
 
 export const metadata: Metadata = pageMetadata({
   title: siteConfig.defaultTitle,
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         {children}
         <Analytics />
+        <WidgetTracker />
       </body>
     </html>
   );
