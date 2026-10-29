@@ -9,9 +9,9 @@ const ROOT = join(import.meta.dirname, "..");
 const SCAN_DIRS = ["app", "components", "lib", "public"];
 
 const BANNED_PATTERNS = [
-  { name: "702-222-1964 variants", re: /702[-.\s)]*\s*222[-.\s]*1964|222[-.\s]*1964|7022221964/i },
+  { name: "702-500-1955 variants", re: /702[-.\s)]*\s*222[-.\s]*1964|222[-.\s]*1964|7025001955/i },
   { name: "702-500-1942 variants", re: /702[-.\s)]*\s*500[-.\s]*1942|500[-.\s]*1942|17025001942|7025001942/i },
-  { name: "702-820-5408 variants", re: /702[-.\s)]*\s*820[-.\s]*5408|820[-.\s]*5408/i },
+  { name: "702-500-1955 variants", re: /702[-.\s)]*\s*820[-.\s]*5408|820[-.\s]*5408/i },
   { name: "tel:+1702", re: /tel:\+1[-.\s]*702/i },
   { name: "generic 702 area code", re: /\b702[-.\s)]?\s*\d{3}[-.\s]?\d{4}\b/ },
 ];
